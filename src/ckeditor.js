@@ -27,18 +27,13 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
-
-import GFMDataProcessor from '@ckeditor/ckeditor5-markdown-gfm/src/gfmdataprocessor';
-
-function Markdown(editor) {
-	editor.data.processor = new GFMDataProcessor();
-}
+import CommonMarkPlugin from '@ckeditor/ckeditor5-markdown-gfm/src/commonmark';
 
 export default class ClassicEditor extends ClassicEditorBase { }
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
-	Markdown,
+	CommonMarkPlugin,
 	Essentials,
 	UploadAdapter,
 	Autoformat,
