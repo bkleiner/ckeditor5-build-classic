@@ -29,6 +29,8 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import CommonMarkPlugin from '@ckeditor/ckeditor5-markdown-gfm/src/commonmark';
 
+import WikiLink from './wiki-link'
+
 export default class ClassicEditor extends ClassicEditorBase { }
 
 // Plugins to include in the build.
@@ -54,7 +56,8 @@ ClassicEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	WikiLink,
 ];
 
 // Editor configuration.
